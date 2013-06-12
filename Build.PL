@@ -3,13 +3,13 @@ use Module::Build;
 Module::Build -> new
 (
  module_name    => 'CGI::Snapp::Dispatch',
- license        => 'artistic',
+ license        => 'artistic_2',
  dist_abstract  => 'Dispatch requests to CGI::Snapp-based objects',
  dist_author    => 'Ron Savage <ron@savage.net.au>',
  build_requires =>
  {
- 	 Test::More => 0.94,
- 	 Test::Pod  => 1.44,
+ 	 Test::More=> 0.94,
+# 	 Test::Pod  => 1.45, # Make it optional. See t/pod.t
  },
  configure_requires =>
  {
@@ -19,7 +19,7 @@ Module::Build -> new
  {
 	Capture::Tiny   => 0.16,
 	Carp            => 1.20,
-	CGI::Snapp      => 1.03,
+	CGI::Snapp      => 1.04,
 	Class::Load     => 0.18,
 	File::Spec      => 0.86,
 	Hash::FieldHash => 0.10,
